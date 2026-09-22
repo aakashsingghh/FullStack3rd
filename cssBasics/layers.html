@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(255, 188, 140)
+        }
+        @layer special, base; /* This line is used to define the order of layers. The "base" layer will be applied first, followed by the "special" layer. */
+        @layer base{
+            .para{
+                font-size: 100px;
+                color: rgb(176, 57, 57);
+                text-align: center;
+            }
+        }
+        @layer special{
+            .highlight-para{
+                font-size: 45px;
+                color: black;
+                text-align: right;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p class="para highlight-para">Screen me kya dekh raha hai, apne kaam se kaam rakh!!</p>
+
+</body>
+</html>
