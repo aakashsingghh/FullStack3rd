@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px;
+        }
+
+        .collage {
+            width: min(90vw, 900px);
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 250px 250px;
+
+            gap: 8px;
+
+            margin: auto;
+        }
+
+        .box {
+            overflow: hidden;
+            position: relative;
+
+            transform: skewX(-10deg);
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transform: skewX(10deg) scale(1.15);
+        }
+
+        /* First image takes 2 columns */
+        .box1 {
+            grid-column: 1 / 3;
+        }
+
+        /* Second image takes 2 rows */
+        .box2 {
+            grid-row: 1 / 3;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="collage">
+
+        <div class="box box1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXOEYPw10h9xelUrhuu6mesrJSNJ_GPy2_wTsHUfTJdA&s=10">
+        </div>
+
+        <div class="box box2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV5uRmDBqtDIKEslkr0H4u4zipg5udVOac7Y09ASnfoA&s=10">
+        </div>
+
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVsuJikw8ZcT3dM9XCwwGMERWImZA8SArZ242cVWgDEw&s=10">
+        </div>
+
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl-pqVGxRBtNMSXomSrtynrMd7rcA3CkhJ1yhUQKp0sA&s=10">
+        </div>
+
+    </div>
+
+</body>
+</html>
