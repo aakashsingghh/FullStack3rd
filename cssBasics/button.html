@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: peachpuff;
+        }
+        button{
+            width: 150px; 
+            height: 100px;
+            font-size: 20px;
+            background-color: rgb(100, 23, 0);
+            color: beige;
+        }
+        button:hover{
+            color: rgb(82, 29, 0);
+            background-color: beige;
+            box-shadow: 2px 2px 8px rgb(100, 23, 0);
+        }
+        button:active{
+            color: rgb(82, 29, 0);
+            
+        }
+        button:focus{
+            background-color: rgb(255, 232, 170);
+            color:rgb(101, 81, 0)
+        }
+
+        input[type="checkbox"]{
+            width: 50px; 
+            height: 40px;
+
+        }
+        input[type="checkbox"]:checked{
+            box-shadow: 3px 3px 5px black;
+            accent-color:pink;
+        }
+
+        a:link{
+            color: blue;
+            text-decoration :none;
+        }
+        a:visited{
+            color: white;
+            background-color: beige;
+        }
+
+        
+/* Form Input Pseudo Classes
+:checked
+:disabled
+:enabled
+:required
+:optional
+:valid
+:invalid
+:read-only
+:read-write
+:placeholder-shown
+:in-range
+:out-of-range */
+
+        
+        input:required{
+            border-width: 0px 0px 1px 0px;
+            border-color: rgb(19, 178, 252);
+            font-size:20px;
+
+        }
+        input:read-write{
+            background-color: transparent;
+        }
+        input:enabled{
+            color: beige;
+            background-color: rgb(98, 34, 0)
+        }
+        input:read-only{
+            color: grey;
+            background-color: darkgray;
+        }
+
+        input:disabled{
+            background-color: orange;
+            color: rgb(255, 0, 0);
+
+        }
+
+        input::placeholder {
+            color: rgb(100, 23, 0);
+        }
+
+        input:invalid{
+            color: rgb(244, 124, 59);
+        }
+
+        input:valid{
+            color: rgb(124, 214, 104);
+            background-color: teal ;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <button>Click Me</button>
+    <a href="https://www.apple.com/in/shop/buy-mac/macbook-air/13-inch-sky-blue-m5-chip-10-core-cpu-8-core-gpu-16gb-memory-512gb-storage?afid=p240%7Cgo~cmp-11189655492~adg-116476338184~ad-467299283002_pla-2535669719197~dev-c~ext-~prd-MDHE4HN%2FA-IN~mca-5055540~nt-search&cid=aos-in-kwgo-pla-mac-mac--product-MDHE4HN%2FA-IN">Link</a>
+    <input type="checkbox" >
+        <br><br>
+    <form>
+        <input type="text" value="Mathura" readonly><br>
+        <input type="text" placeholder="First name" required><br>
+        <input type="text" placeholder="Second name" required><br>
+        <input type="text" placeholder="Last name" required><br>
+        <input type="number" value=20 disabled><br>
+        <input type="text" placeholder="Email" enabled><br>
+        <input type="number" min="20" max="100"><br>
+
+        <br><br>
+        <button type="submit">
+
+            Submit
+
+        </button>
+    </form>
+   
+</body>
+</html>
+
