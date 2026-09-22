@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Universal Selector (*) */
+        *{
+            color:lightblue;
+            background-color: rgb(0, 7, 8);
+            margin: 0px;
+            padding: 15px;
+        }
+        /* Custom Tag (it has no default properties) */
+        mytag{
+            color: red;
+            font-size: 20px;
+        }
+
+
+        
+        /* Class Selector */
+        .cl{
+            color: yellowgreen;
+        }
+        /* ID Selector (#IDname)*/
+        #myid{
+            color: orange;
+            font-size: 40px;
+        }
+        /* Attribute Selector  */
+        input{
+            font-size: 40px;
+            
+        }
+        input[type=email]{
+            border-width: 0 0 5px 0;
+            border-color: rgb(20, 2, 2)
+        }
+        /* Combinators */
+        /* Selecting child in a parent element (selected child must pe direct child of the parent) */
+        section>h2{
+            color: rgb(239, 72, 105);
+        }
+         /* Indirect Sibling Selector (E1 ~ E2) : It selects all the elements E2 which are siblings of the element E1. */
+         h2~p{
+            box-shadow: 2px 2px 10px white; 
+        }
+        /* Direct Sibling Selector (E1 + E2) : It selects the element E2 which is the immediate next sibling of the element E1. */
+        h2+p{
+            font-size : 45px;
+        }
+       
+    </style>
+</head>
+<body>
+    <section>
+    <h2>Selectors</h2>
+    <p>Direct Sibling</p>
+    <p>Indirect Sibling</p>
+    <ul>
+        <br>
+        <mytag>         Custom Tag  </mytag>
+        <li>            Universal   </li>
+        <li id="myid">  Id          </li>
+        <li class="cl"> Class       </li>
+        <li>            Element     </li>
+        <li>            Attribute   </li>
+        <li>            Combinators </li>
+        <li>            Pseudo Class</li> 
+        <li>            Pseudo Element</li>
+
+        
+    </ul>
+
+    <input type="text" placeholder="Enter your name"><br>
+    <input type="email" placeholder="Enter your email">
+</section>
+</body>
+</html>
