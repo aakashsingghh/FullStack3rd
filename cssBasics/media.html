@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+        p{
+            font-size: 30px;
+            color: white;
+        }
+        /* Media query is used to apply different styles based on the screen size. In this case, when the screen width is 600px or more, 
+        the font size of the paragraph will be increased to 50px and the color will change to red. */
+        /* @media (min-width: 800px) {
+            p{
+                font-size: 50px;
+                color: red;
+                background-color: yellow;
+            }
+        }
+
+        @media (max-width: 600px) {
+            p{
+                font-size: 70px;
+                color: blue;
+                background-color: green;
+            }
+        } */
+        /* Logical "and" operator (checks the condition of both the media queries) */
+        /* @media (max-width: 600px) and (min-width: 400px) {
+            p{
+                font-size: 70px;
+                color: blue;
+                background-color: green;
+            }
+        } */
+
+         /* Logical "," operator (checks the condition of any of the media queries) */
+         /* @media (max-width: 400px), (min-width: 800px) {
+            p{
+                font-size: 70px;
+                color: blue;
+                background-color: green;
+            }
+        } */
+
+        /*Container card are used to group related content together and apply styles to them as a whole.
+        In this case, the media query is applied to the container class, which will affect all the elements inside it. */
+        .parent{
+            container-type: inline-size;
+            container-name: parent;
+            font-size: 40px;
+        }
+        @container parent (min-width: 400px) {
+            
+            p{
+                font-size: 70px;
+                color: rgb(145, 145, 244);
+                background-color: rgb(77, 78, 77);
+            }
+        }
+        @media (width > 400px) {
+
+            body {
+
+                background-color: rgb(0, 61, 57);
+
+            }
+
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div class="child">
+        <p>
+            Hello World!!
+        </p>
+    
+    </div>
+</div>
+ 
+
+</body>
+</html>
