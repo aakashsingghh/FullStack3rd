@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1{
+            height: 500px;
+            width:  500px;
+            outline: 1px solid black;
+            display: grid;
+            /* grid-template-columns:  repeat(2, 1fr); we can also use "1fr 1fr 1fr" instead of repeat(3, 1fr) */
+            /* grid-template-rows: 100px 100px ; we can also use repeat(3, 100px) instead  "100px 100px 100px" */
+            grid-template-columns:  repeat(auto-fit, minmax(300px, 1fr)); 
+            grid-template-areas:"box1 box2 box3"
+                                "box4 box5 box6";
+                                
+                                
+           }
+        /* .container1>div{
+            outline:1px dashed black;
+            font-size: 30px;
+            background-color: aqua;
+        } */
+        .container2{
+            outline: 1px solid black;
+            display: grid;
+            /* grid-template-columns:  repeat(2, 1fr); we can also use "1fr 1fr 1fr" instead of repeat(3, 1fr) */
+            /* grid-template-rows: 100px 100px ; we can also use repeat(3, 100px) instead  "100px 100px 100px" */
+            grid-template-columns:  repeat(auto-fit, minmax(250px, 1fr)); 
+           }
+        /* .container2>div{
+            outline:1px dashed black;
+            font-size: 30px;
+            background-color: aqua;
+        } */
+        #box1{
+            grid-column-start:1; 
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Container 1- auto-fill</h1>
+    <div class="container1">
+        
+        <div id="box1;">1</div>
+        <div id="box2;">2</div>
+        <div id="box3;">3</div>
+        <div id="box4;">4</div>
+        <div id="box5;">5</div>
+        <div id="box6;">6</div>
+
+    </div>
+
+    <!-- <br><br><br>
+    <h1>Container 2- auto-fit</h1>
+    <div class="container2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div> -->
+    
+</body>
+</html>
