@@ -8,18 +8,21 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-700: oklch(50.5% 0.213 27.518);
+    --color-amber-500: oklch(76.9% 0.188 70.08);
+    --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-blue-700: oklch(48.8% 0.243 264.376);
-    --color-black: #000;
+    --color-slate-200: oklch(92.9% 0.013 255.508);
+    --color-slate-600: oklch(44.6% 0.043 257.281);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
-    --text-6xl: 3.75rem;
-    --text-6xl--line-height: 1;
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --font-weight-bold: 700;
+    --radius-lg: 0.5rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --color-brand: #1E40AF;
   }
 }
 @layer base {
@@ -216,57 +219,61 @@
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
 }
-.heading {
-  background-color: var(--color-white);
-  font-size: var(--text-6xl);
-  line-height: var(--tw-leading, var(--text-6xl--line-height));
-  color: var(--color-black);
-  text-decoration-line: underline;
-  &:where(.dark, .dark *) {
-    background-color: var(--color-black);
-  }
-  &:where(.dark, .dark *) {
-    color: var(--color-white);
-  }
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom-style: var(--tw-border-style);
+  border-bottom-width: 1px;
+  border-color: var(--color-slate-200);
+  padding-inline: calc(var(--spacing) * 6);
+  padding-block: calc(var(--spacing) * 4);
 }
-h1 {
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 8);
   font-size: var(--text-sm);
   line-height: var(--tw-leading, var(--text-sm--line-height));
-  color: var(--color-black);
-  text-decoration-line: underline;
-  @media (width >= 48rem) {
-    font-size: var(--text-6xl);
-    line-height: var(--tw-leading, var(--text-6xl--line-height));
-  }
-  &:where(.dark, .dark *) {
-    color: var(--color-white);
-  }
+  color: var(--color-slate-600);
 }
-button {
-  border-radius: 0.25rem;
-  background-color: var(--color-black);
+.right {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 5);
+}
+.logo {
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-blue-700);
+}
+.get-started {
+  border-radius: var(--radius-lg);
+  border-color: var(--color-amber-500);
+  background-color: var(--color-blue-600);
   padding-inline: calc(var(--spacing) * 4);
   padding-block: calc(var(--spacing) * 2);
-  text-align: center;
   color: var(--color-white);
-  &:hover {
-    @media (hover: hover) {
-      background-color: var(--color-blue-700);
-    }
-  }
-  &:where(.dark, .dark *) {
-    background-color: var(--color-white);
-  }
-  &:where(.dark, .dark *) {
-    color: var(--color-black);
-  }
-  &:where(.dark, .dark *) {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-red-700);
-      }
-    }
-  }
+}
+.hero {
+  margin-inline: auto;
+  display: flex;
+  max-width: 1200px;
+  align-items: center;
+  gap: calc(var(--spacing) * 12);
+  padding-inline: calc(var(--spacing) * 6);
+  padding-block: calc(var(--spacing) * 20);
+}
+.hero-content {
+  flex: 1;
+}
+.hero-image {
+  flex: 1;
+}
+.hero-image img {
+  width: 100%;
 }
 @property --tw-rotate-x {
   syntax: "*";
@@ -351,6 +358,10 @@ button {
   syntax: "*";
   inherits: false;
 }
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -374,6 +385,7 @@ button {
       --tw-drop-shadow-color: initial;
       --tw-drop-shadow-alpha: 100%;
       --tw-drop-shadow-size: initial;
+      --tw-font-weight: initial;
     }
   }
 }
